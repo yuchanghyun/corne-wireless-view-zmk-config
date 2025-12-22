@@ -27,6 +27,36 @@
         };
     };
 
+    macros {
+        function: function {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR &kp RPAR &kp SPACE &kp LBRC &kp RBRC>;
+            label = "FUNCTION";
+        };
+
+        arrow_function: arrow_function {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR &kp RPAR &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp LBRC &kp RBRC>;
+            label = "ARROW_FUNCTION";
+        };
+
+        console_log: console_log {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp C &kp O &kp N &kp S &kp O &kp L &kp E &kp UNDER &kp L &kp O &kp G &kp LPAR &kp RPAR>;
+            label = "CONSOLE_LOG";
+        };
+
+        customizer: customizer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp C &kp U &kp S &kp T &kp O &kp M &kp I &kp Z &kp E &kp R>;
+            label = "CUSTOMIZER";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -40,7 +70,7 @@
             display-name = "Base";
             bindings = <
 &kp TAB    &kp Q             &kp W           &mt LEFT_PARENTHESIS E  &mt LEFT_BRACKET R  &mt LEFT_BRACE T    &mt RIGHT_BRACE Y  &mt RIGHT_BRACKET U  &mt RIGHT_PARENTHESIS I  &kp O    &kp P                 &kp BSPC
-&kp LCTRL  &mt LEFT_SHIFT A  &mt LEFT_ALT S  &mt LEFT_GUI D          &kp F               &kp G               &kp H              &kp J                &kp K                    &kp L    &mt RIGHT_SHIFT SEMI  &kp SQT
+&kp LCTRL  &mt LEFT_SHIFT A  &mt LEFT_ALT S  &mt LEFT_GUI D          &kp F               &kp G               &kp H              &kp J                &kp K                    &kp L    &mt RIGHT_SHIFT SEMI  &mt RIGHT_CONTROL SQT
 &kp LSHFT  &kp Z             &kp X           &kp C                   &kp V               &kp B               &mt B N            &kp M                &kp COMMA                &kp DOT  &kp FSLH              &kp LEFT_SHIFT
                                              &kp LALT                &mo 1               &kp LGUI            &kp SPACE          &raise_lang          &kp RGUI
             >;
@@ -90,15 +120,15 @@
         };
 
         chang_1 {
-            display-name = "Lower";
+            display-name = "CH 1";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans         &trans         &trans         &trans         &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp RS(RA(A))  &kp RS(RA(S))  &kp RS(RA(W))  &kp RS(RA(D))  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp RS(RA(F))  &kp RS(RA(V))  &kp RS(RA(R))  &kp RS(RA(G))  &trans  &trans
-                        &trans  &trans  &trans    &trans         &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &function      &arrow_function  &console_log   &customizer    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp RS(RA(A))  &kp RS(RA(S))    &kp RS(RA(W))  &kp RS(RA(D))  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp RS(RA(F))  &kp RS(RA(V))    &kp RS(RA(R))  &kp RS(RA(G))  &trans  &trans
+                        &trans  &trans  &trans    &trans         &trans           &trans
             >;
 
-            label = "CH 1";
+            label = "CH1";
         };
 
         bluetooth_layer {
