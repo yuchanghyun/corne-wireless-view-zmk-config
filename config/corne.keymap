@@ -23,7 +23,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "RAISE_LANG";
             #binding-cells = <0>;
-            bindings = <&mo 2>, <&kp RC(SPACE)>;
+            bindings = <&mo 2>, <&kp RG(SPACE)>;
         };
     };
 
