@@ -31,21 +31,21 @@
         function: function {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LPAR &kp RPAR &kp SPACE &kp LBRC &kp RBRC>;
+            bindings = <&kp LPAR &kp RPAR &kp SPACE &kp LBRC &kp RBRC &kp LEFT_ARROW>;
             label = "FUNCTION";
         };
 
         arrow_function: arrow_function {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LPAR &kp RPAR &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp LBRC &kp RBRC>;
+            bindings = <&kp LPAR &kp RPAR &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp LBRC &kp RBRC &kp LEFT_ARROW>;
             label = "ARROW_FUNCTION";
         };
 
         console_log: console_log {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp C &kp O &kp N &kp S &kp O &kp L &kp E &kp UNDER &kp L &kp O &kp G &kp LPAR &kp RPAR>;
+            bindings = <&kp C &kp O &kp N &kp S &kp O &kp L &kp E &kp UNDER &kp L &kp O &kp G &kp LPAR &kp RPAR &kp LEFT_ARROW>;
             label = "CONSOLE_LOG";
         };
 
@@ -54,6 +54,20 @@
             #binding-cells = <0>;
             bindings = <&kp C &kp U &kp S &kp T &kp O &kp M &kp I &kp Z &kp E &kp R>;
             label = "CUSTOMIZER";
+        };
+
+        const: const {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp C &kp O &kp N &kp S &kp T &kp SPACE &kp SPACE &kp EQUAL &kp SPACE &kp LEFT_ARROW &kp LEFT_ARROW &kp LEFT_ARROW>;
+            label = "CONST";
+        };
+
+        let: let {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp L &kp E &kp T &kp SPACE &kp SPACE &kp EQUAL &kp SPACE &kp LEFT_ARROW &kp LEFT_ARROW &kp LEFT_ARROW>;
+            label = "LET";
         };
     };
 
@@ -102,8 +116,8 @@
             display-name = "Raise";
             bindings = <
 &kp TAB  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR          &kp RPAR           &kp BSPC
-&trans   &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp PLUS   &kp SPACE        &kp LEFT_BRACE    &kp RIGHT_BRACE    &mt RETURN GRAVE
-&trans   &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp EQUAL  &kp TAB          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
+&trans   &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp SPACE        &kp LEFT_BRACE    &kp RIGHT_BRACE    &mt RETURN GRAVE
+&trans   &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp TAB          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
                            &trans    &trans    &trans       &trans     &trans     &trans
             >;
         };
@@ -122,7 +136,7 @@
         chang_1 {
             display-name = "CH 1";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &function      &arrow_function  &console_log   &customizer    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &function      &arrow_function  &console_log   &customizer    &const  &let
 &trans  &trans  &trans  &trans  &trans  &trans    &kp RS(RA(A))  &kp RS(RA(S))    &kp RS(RA(W))  &kp RS(RA(D))  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp RS(RA(F))  &kp RS(RA(V))    &kp RS(RA(R))  &kp RS(RA(G))  &trans  &trans
                         &trans  &trans  &trans    &trans         &trans           &trans
@@ -133,7 +147,7 @@
 
         bluetooth_layer {
             bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &bt BT_CLR
 &trans  &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
                                     &trans        &trans        &trans          &trans  &trans  &trans
