@@ -11,7 +11,7 @@
 &mt {
     bindings = <&kp>, <&kp>;
 
-    tapping-term-ms = <200>;
+    tapping-term-ms = <300>;
     quick-tap-ms = <0>;
     flavor = "tap-preferred";
     hold-trigger-on-release;
@@ -31,21 +31,21 @@
         function: function {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LPAR &kp RPAR &kp SPACE &kp LBRC &kp RBRC &kp LEFT_ARROW>;
+            bindings = <&kp LPAR &kp RPAR &kp SPACE &kp LBRC &kp RBRC &kp LEFT_ARROW &kp RETURN>;
             label = "FUNCTION";
         };
 
         arrow_function: arrow_function {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LPAR &kp RPAR &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp LBRC &kp RBRC &kp LEFT_ARROW>;
+            bindings = <&kp LPAR &kp RPAR &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp LBRC &kp RBRC &kp LEFT_ARROW &kp RET>;
             label = "ARROW_FUNCTION";
         };
 
         console_log: console_log {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp C &kp O &kp N &kp S &kp O &kp L &kp E &kp UNDER &kp L &kp O &kp G &kp LPAR &kp RPAR &kp LEFT_ARROW>;
+            bindings = <&kp C &kp O &kp N &kp S &kp O &kp L &kp E &kp PERIOD &kp L &kp O &kp G &kp LPAR &kp RPAR &kp LEFT_ARROW>;
             label = "CONSOLE_LOG";
         };
 
@@ -125,7 +125,7 @@
         both_layer {
             bindings = <
 &mo 5   &kp F1             &kp F2           &kp F3      &kp F4            &kp F5        &kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &trans
-&trans  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp K_MUTE  &kp K_PLAY_PAUSE  &kp K_NEXT    &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans
+&trans  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp K_MUTE  &kp C_PLAY_PAUSE  &kp K_NEXT    &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans
 &trans  &trans             &trans           &trans      &trans            &kp K_PREV    &kp F16  &kp F17  &kp F18  &kp F19  &kp F20  &trans
                                             &trans      &trans            &trans        &trans   &trans   &trans
             >;
@@ -136,7 +136,7 @@
         chang_1 {
             display-name = "CH 1";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &function      &arrow_function  &console_log   &customizer    &const  &let
+&trans  &trans  &trans  &trans  &trans  &trans    &function      &arrow_function  &console_log   &const         &let    &customizer
 &trans  &trans  &trans  &trans  &trans  &trans    &kp RS(RA(A))  &kp RS(RA(S))    &kp RS(RA(W))  &kp RS(RA(D))  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp RS(RA(F))  &kp RS(RA(V))    &kp RS(RA(R))  &kp RS(RA(G))  &trans  &trans
                         &trans  &trans  &trans    &trans         &trans           &trans
