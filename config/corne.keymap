@@ -11,7 +11,7 @@
 &mt {
     bindings = <&kp>, <&kp>;
 
-    tapping-term-ms = <400>;
+    tapping-term-ms = <230>;
     quick-tap-ms = <0>;
     flavor = "tap-preferred";
     hold-trigger-on-release;
