@@ -136,10 +136,10 @@
         chang_1 {
             display-name = "CH 1";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &function      &arrow_function  &console_log   &const         &let    &customizer
-&trans  &trans  &trans  &trans  &trans  &trans    &kp RS(RA(A))  &kp RS(RA(S))    &kp RS(RA(W))  &kp RS(RA(D))  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp RS(RA(F))  &kp RS(RA(V))    &kp RS(RA(R))  &kp RS(RA(G))  &trans  &trans
-                        &trans  &trans  &trans    &trans         &trans           &trans
+&trans  &kp LG(LS(LC(NUMBER_2)))  &kp LG(LS(LC(NUMBER_4)))  &kp LG(LS(N5))  &trans  &trans    &function      &arrow_function  &console_log   &const         &let    &customizer
+&trans  &trans                    &trans                    &trans          &trans  &trans    &kp RS(RA(A))  &kp RS(RA(S))    &kp RS(RA(W))  &kp RS(RA(D))  &trans  &trans
+&trans  &trans                    &trans                    &trans          &trans  &trans    &kp RS(RA(F))  &kp RS(RA(V))    &kp RS(RA(R))  &kp RS(RA(G))  &trans  &trans
+                                                            &trans          &trans  &trans    &trans         &trans           &trans
             >;
 
             label = "CH1";
