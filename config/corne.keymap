@@ -25,6 +25,13 @@
             #binding-cells = <0>;
             bindings = <&mo 2>, <&kp RG(SPACE)>;
         };
+
+        lower_return: lower_return {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LOWER_RETURN";
+            #binding-cells = <0>;
+            bindings = <&mo 1>, <&kp RET>;
+        };
     };
 
     macros {
@@ -93,7 +100,7 @@
 &trans  &kp Q             &kp W           &mt LEFT_PARENTHESIS E  &mt LEFT_BRACKET R  &mt LEFT_BRACE T    &mt RIGHT_BRACE Y  &mt RIGHT_BRACKET U  &mt RIGHT_PARENTHESIS I  &kp O       &kp P                 &trans
 &trans  &mt LEFT_SHIFT A  &mt LEFT_ALT S  &mt LEFT_GUI D          &mt LCTRL F         &mt LG(SPACE) G     &kp H              &kp J                &kp K                    &kp L       &mt RIGHT_SHIFT SEMI  &trans
 &trans  &kp Z             &kp X           &kp C                   &kp V               &kp B               &mt B N            &kp M                &mt LT COMMA             &mt GT DOT  &mt QUESTION FSLH     &trans
-                                          &kp LALT                &mo 1               &kp LGUI            &kp SPACE          &raise_lang          &kp RGUI
+                                          &kp LALT                &lower_return       &kp LGUI            &kp SPACE          &raise_lang          &kp RGUI
             >;
         };
 
@@ -131,10 +138,10 @@
 
         both_layer {
             bindings = <
-&trans  &kp F1             &kp F2           &kp F3      &kp F4            &kp F5        &kp F6   &kp F7   &kp F8   &kp F9                    &kp F10                    &trans
-&trans  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp K_MUTE  &kp C_PLAY_PAUSE  &kp K_NEXT    &kp F11  &kp F12  &kp F13  &kp F14                   &kp F15                    &trans
-&trans  &mo 5              &trans           &trans      &trans            &kp K_PREV    &kp F16  &kp F17  &kp F18  &kp LG(LS(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &trans
-                                            &trans      &trans            &trans        &trans   &trans   &trans
+&trans  &kp F1                     &kp F2                   &kp F3      &kp F4            &kp F5        &kp F6   &kp F7   &kp F8   &kp F9                    &kp F10                    &trans
+&trans  &kp LA(LS(K_VOLUME_DOWN))  &kp LA(LS(K_VOLUME_UP))  &kp K_MUTE  &kp C_PLAY_PAUSE  &kp K_NEXT    &kp F11  &kp F12  &kp F13  &kp F14                   &kp F15                    &trans
+&trans  &mo 5                      &trans                   &trans      &trans            &kp K_PREV    &kp F16  &kp F17  &kp F18  &kp LG(LS(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &trans
+                                                            &trans      &trans            &trans        &trans   &trans   &trans
             >;
 
             label = "Both";
