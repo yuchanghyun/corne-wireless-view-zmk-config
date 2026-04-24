@@ -97,10 +97,10 @@
 
             display-name = "Base";
             bindings = <
-&trans  &kp Q             &kp W           &kp E           &kp R        &kp T       &kp Y      &kp U        &kp I         &kp O       &kp P                 &trans
-&trans  &mt LEFT_SHIFT A  &mt LEFT_ALT S  &mt LEFT_GUI D  &mt LCTRL F  &kp G       &kp H      &kp J        &kp K         &kp L       &mt RIGHT_SHIFT SEMI  &trans
-&trans  &kp Z             &kp X           &kp C           &kp V        &kp B       &mt B N    &kp M        &mt LT COMMA  &mt GT DOT  &mt QUESTION FSLH     &trans
-                                          &kp LALT        &lower_lang  &kp LGUI    &kp SPACE  &raise_lang  &kp RGUI
+&trans            &kp Q             &kp W           &kp E           &kp R        &kp T       &kp Y      &kp U        &kp I         &kp O       &kp P                 &trans
+&kp LEFT_CONTROL  &mt LEFT_SHIFT A  &mt LEFT_ALT S  &mt LEFT_GUI D  &mt LCTRL F  &kp G       &kp H      &kp J        &kp K         &kp L       &mt RIGHT_SHIFT SEMI  &trans
+&trans            &kp Z             &kp X           &kp C           &kp V        &kp B       &mt B N    &kp M        &mt LT COMMA  &mt GT DOT  &mt QUESTION FSLH     &mo 6
+                                                    &kp LALT        &lower_lang  &kp LGUI    &kp SPACE  &raise_lang  &kp RGUI
             >;
         };
 
@@ -113,10 +113,10 @@
 
             display-name = "Lower";
             bindings = <
-&trans  &kp N1   &kp N2     &kp N3      &kp N4  &kp N5     &kp N6         &kp N7         &kp N8         &kp N9         &kp N0  &trans
-&trans  &kp TAB  &kp SPACE  &kp ESCAPE  &mo 4   &kp RET    &kp RG(RS(A))  &kp RG(RS(S))  &kp RS(RG(W))  &kp RS(RG(D))  &trans  &trans
-&trans  &trans   &trans     &kt CAPS    &trans  &trans     &kp RG(RS(F))  &kp RS(RG(V))  &kp RS(RG(R))  &kp RG(RS(G))  &trans  &trans
-                            &trans      &trans  &trans     &trans         &trans         &trans
+&trans     &kp N1   &kp N2     &kp N3      &kp N4  &kp N5     &kp N6         &kp N7         &kp N8         &kp N9         &kp N0  &trans
+&kp GLOBE  &kp TAB  &kp SPACE  &kp ESCAPE  &mo 4   &kp RET    &kp RG(RS(A))  &kp RG(RS(S))  &kp RS(RG(W))  &kp RS(RG(D))  &trans  &trans
+&trans     &trans   &trans     &kt CAPS    &trans  &trans     &kp RG(RS(F))  &kp RS(RG(V))  &kp RS(RG(R))  &kp RG(RS(G))  &trans  &trans
+                               &trans      &trans  &trans     &trans         &trans         &trans
             >;
         };
 
@@ -168,6 +168,15 @@
             >;
 
             label = "BLE";
+        };
+
+        arrow_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans          &kp UP_ARROW    &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans          &trans          &trans           &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
         };
     };
 
