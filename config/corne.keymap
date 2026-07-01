@@ -99,7 +99,7 @@
             bindings = <
 &trans            &kp Q             &kp W           &kp E           &kp R        &kp T       &kp Y      &kp U        &kp I         &kp O       &kp P                 &trans
 &kp LEFT_CONTROL  &mt LEFT_SHIFT A  &mt LEFT_ALT S  &mt LEFT_GUI D  &mt LCTRL F  &kp G       &kp H      &kp J        &kp K         &kp L       &mt RIGHT_SHIFT SEMI  &trans
-&trans            &kp Z             &kp X           &kp C           &kp V        &kp B       &mt B N    &kp M        &mt LT COMMA  &mt GT DOT  &mt QUESTION FSLH     &mo 6
+&mo 8             &kp Z             &kp X           &kp C           &kp V        &kp B       &mt B N    &kp M        &mt LT COMMA  &mt GT DOT  &mt QUESTION FSLH     &mo 6
                                                     &kp LALT        &lower_lang  &kp LGUI    &kp SPACE  &raise_lang  &kp RGUI
             >;
         };
@@ -185,6 +185,15 @@
 &trans  &kp NUMBER_6  &kp N7        &kp N8        &kp N9        &kp N0    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans
                                     &trans        &trans        &trans    &trans  &trans  &trans
+            >;
+        };
+
+        clipboard {
+            bindings = <
+&mt LG(LA(LC(LS(N0)))) LC(LA(LS(N0)))  &mt LS(LA(LC(LG(NUMBER_1)))) LS(LA(LC(NUMBER_1)))  &mt LC(LS(LA(LG(NUMBER_2)))) LS(LA(LC(NUMBER_2)))  &mt LS(LA(LC(LG(NUMBER_3)))) LC(LS(LA(NUMBER_3)))  &mt LG(LC(LA(LS(NUMBER_4)))) LC(LA(LS(NUMBER_4)))  &mt LG(LA(LC(LS(N5)))) LC(LA(LS(N5)))          &trans  &trans  &trans  &trans  &trans  &trans
+&trans                                 &mt LG(LA(LC(LS(NUMBER_6)))) LC(LA(LS(NUMBER_6)))  &mt LG(LC(LS(LA(N7)))) LA(LS(LC(N7)))              &mt LG(LC(LA(LS(NUMBER_8)))) LC(LA(LS(N8)))        &mt LG(LC(LS(LA(NUMBER_9)))) LC(LA(NUMBER_9))      &mt LG(LA(LC(LS(N0)))) LC(LA(LS(NUMBER_0)))    &trans  &trans  &trans  &trans  &trans  &trans
+&trans                                 &trans                                             &trans                                             &trans                                             &trans                                             &trans                                         &trans  &trans  &trans  &trans  &trans  &trans
+                                                                                                                                             &trans                                             &trans                                             &trans                                         &trans  &trans  &trans
             >;
         };
     };
