@@ -35,60 +35,11 @@
     };
 
     macros {
-        function: function {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LPAR &kp RPAR &kp SPACE &kp LBRC &kp RBRC &kp LEFT_ARROW &kp RETURN>;
-            label = "FUNCTION";
-        };
-
-        arrow_function: arrow_function {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LPAR &kp RPAR &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp LBRC &kp RBRC &kp LEFT_ARROW &kp RET>;
-            label = "ARROW_FUNCTION";
-        };
-
-        console_log: console_log {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp C &kp O &kp N &kp S &kp O &kp L &kp E &kp PERIOD &kp L &kp O &kp G &kp LPAR &kp RPAR &kp LEFT_ARROW>;
-            label = "CONSOLE_LOG";
-        };
-
-        customizer: customizer {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp C &kp U &kp S &kp T &kp O &kp M &kp I &kp Z &kp E &kp R>;
-            label = "CUSTOMIZER";
-        };
-
-        const: const {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp C &kp O &kp N &kp S &kp T &kp SPACE &kp SPACE &kp EQUAL &kp SPACE &kp LEFT_ARROW &kp LEFT_ARROW &kp LEFT_ARROW>;
-            label = "CONST";
-        };
-
-        let: let {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp L &kp E &kp T &kp SPACE &kp SPACE &kp EQUAL &kp SPACE &kp LEFT_ARROW &kp LEFT_ARROW &kp LEFT_ARROW>;
-            label = "LET";
-        };
-
         reverse_qwerty: reverse_qwerty {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp Y &kp T &kp R &kp E &kp W &kp Q &kp RET>;
             label = "REVERSE_QWERTY";
-        };
-
-        test_token: test_token {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <>;
-            label = "TEST_TOKEN";
         };
     };
 
