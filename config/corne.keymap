@@ -83,6 +83,13 @@
             bindings = <&kp Y &kp T &kp R &kp E &kp W &kp Q &kp RET>;
             label = "REVERSE_QWERTY";
         };
+
+        test_token: test_token {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "TEST_TOKEN";
+        };
     };
 
     keymap {
@@ -150,10 +157,10 @@
         chang_1 {
             display-name = "CH 1";
             bindings = <
-&trans  &kp LG(LS(LC(NUMBER_2)))  &kp LG(LS(LC(NUMBER_4)))  &kp LG(LS(N5))  &trans  &trans    &function      &arrow_function  &console_log   &const         &let    &customizer
-&trans  &trans                    &trans                    &trans          &trans  &trans    &kp RS(RA(A))  &kp RS(RA(S))    &kp RS(RA(W))  &kp RS(RA(D))  &trans  &trans
-&trans  &trans                    &trans                    &trans          &trans  &trans    &kp RS(RA(F))  &kp RS(RA(V))    &kp RS(RA(R))  &kp RS(RA(G))  &trans  &trans
-                                                            &trans          &trans  &trans    &trans         &trans           &trans
+&trans  &kp LG(LS(LC(NUMBER_2)))  &kp LG(LS(LC(NUMBER_4)))  &kp LG(LS(N5))  &trans  &trans    &trans         &trans         &trans         &trans         &trans  &trans
+&trans  &trans                    &trans                    &trans          &trans  &trans    &kp RS(RA(A))  &kp RS(RA(S))  &kp RS(RA(W))  &kp RS(RA(D))  &trans  &trans
+&trans  &trans                    &trans                    &trans          &trans  &trans    &kp RS(RA(F))  &kp RS(RA(V))  &kp RS(RA(R))  &kp RS(RA(G))  &trans  &trans
+                                                            &trans          &trans  &trans    &trans         &trans         &trans
             >;
 
             label = "CH1";
@@ -191,8 +198,8 @@
         clipboard {
             bindings = <
 &mt LG(LA(LC(LS(N0)))) LC(LA(LS(N0)))  &mt LS(LA(LC(LG(NUMBER_1)))) LS(LA(LC(NUMBER_1)))  &mt LC(LS(LA(LG(NUMBER_2)))) LS(LA(LC(NUMBER_2)))  &mt LS(LA(LC(LG(NUMBER_3)))) LC(LS(LA(NUMBER_3)))  &mt LG(LC(LA(LS(NUMBER_4)))) LC(LA(LS(NUMBER_4)))  &mt LG(LA(LC(LS(N5)))) LC(LA(LS(N5)))          &trans  &trans  &trans  &trans  &trans  &trans
-&trans                                 &mt LG(LA(LC(LS(NUMBER_6)))) LC(LA(LS(NUMBER_6)))  &mt LG(LC(LS(LA(N7)))) LA(LS(LC(N7)))              &mt LG(LC(LA(LS(NUMBER_8)))) LC(LA(LS(N8)))        &mt LG(LC(LS(LA(NUMBER_9)))) LC(LA(NUMBER_9))      &mt LG(LA(LC(LS(N0)))) LC(LA(LS(NUMBER_0)))    &trans  &trans  &trans  &trans  &trans  &trans
-&trans                                 &trans                                             &trans                                             &trans                                             &trans                                             &trans                                         &trans  &trans  &trans  &trans  &trans  &trans
+&trans                                 &mt LG(LA(LC(LS(NUMBER_6)))) LC(LA(LS(NUMBER_6)))  &mt LG(LC(LS(LA(N7)))) LA(LS(LC(N7)))              &mt LG(LC(LA(LS(NUMBER_8)))) LC(LA(LS(N8)))        &mt LG(LC(LS(LA(NUMBER_9)))) LC(LA(LS(NUMBER_9)))  &mt LG(LA(LC(LS(N0)))) LC(LA(LS(NUMBER_0)))    &trans  &trans  &trans  &trans  &trans  &trans
+&trans                                 &kp LA(LC(LS(Z)))                                  &kp LS(LC(LA(X)))                                  &kp LS(LC(LA(C)))                                  &trans                                             &trans                                         &trans  &trans  &trans  &trans  &trans  &trans
                                                                                                                                              &trans                                             &trans                                             &trans                                         &trans  &trans  &trans
             >;
         };
